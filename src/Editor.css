@@ -1,0 +1,20 @@
+.header {
+  width: 50%;
+  height: 30px;
+  background-color: lightblue;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  border: 1px solid black;
+  margin: 0;
+  padding: 0
+}
+
+.editor {
+
+  background-color: lightblue;
+  width: 50%;
+  border: 1px solid black;
+  margin: 0;
+  padding: 0
+}
