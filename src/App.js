@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { FaExpandArrowsAlt, FaRegLightbulb } from "react-icons/fa";
-import "./App.css";
+import "./Editor";
 import Editor from "./Editor";
+import Header from "./Header";
 import Preview from "./Preview";
 
 const str = `# Welcome to my React Markdown Previewer!
@@ -54,16 +54,15 @@ function App() {
   const [editorExpand, setEditorExpand] = useState(false);
   const [previewExpand, setPreviewExpand] = useState(false);
 
-  console.log(editorExpand);
   return (
     <div>
-      <div>
+      <div className="container">
         <div>
-          <div className="header">
-            <FaRegLightbulb />
-            <p>Editor</p>
-            <FaExpandArrowsAlt onClick={() => setEditorExpand((st) => !st)} />
-          </div>
+          <Header
+            expand={editorExpand}
+            setExpand={setEditorExpand}
+            text={"Editor"}
+          />
           <div>
             <Editor
               input={input}
@@ -73,14 +72,15 @@ function App() {
           </div>
         </div>
         <div>
-          <button onClick={() => setEditorExpand((st) => !st)}>
-            {/* <LuShrink /> */}
-            <FaExpandArrowsAlt />
-          </button>
+          <Header
+            expand={previewExpand}
+            setExpand={setPreviewExpand}
+            text={"Previewer"}
+          />
           <Preview
             input={input}
             onChangeInput={setInput}
-            editorExpand={editorExpand}
+            previewExpand={previewExpand}
           />
         </div>
       </div>

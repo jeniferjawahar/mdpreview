@@ -1,0 +1,14 @@
+.preview {
+  margin: 0;
+
+  height: 1200px;
+  padding: 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: lightblue;
+  font-size: 16px;
+  resize: none;
+  width: 50vw;
+  height: 100vw;
+}

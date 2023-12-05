@@ -1,20 +1,60 @@
 .header {
-  width: 50%;
+  width: 50vw;
   height: 30px;
   background-color: lightblue;
-  display: flex;
-  justify-content: flex-start;
   color: white;
   border: 1px solid black;
   margin: 0;
-  padding: 0
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
-.editor {
+.icon {
+  color: black;
+  width: 20px;
+  height: 20px;
+  font-size: 1.3em;
+  font-weight: 400;
 
-  background-color: lightblue;
-  width: 50%;
-  border: 1px solid black;
+}
+
+#expand {
+  margin-left: auto;
+}
+
+
+.editor {
   margin: 0;
-  padding: 0
+
+
+  padding: 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: lightblue;
+  font-size: 16px;
+  resize: none;
+  width: 50vw;
+  height: 300px;
+}
+
+
+.new {
+  background-color: lightblue;
+  width: 100vw;
+
+  height: 800px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+}
+
+.container {
+  display: inline-flex;
 }
